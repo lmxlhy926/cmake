@@ -1,0 +1,6 @@
+
+#define aaa @config1@
+#define bbb @config2@
+#cmakedefine MATHLIB
+
+
