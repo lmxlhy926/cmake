@@ -1,7 +1,7 @@
 
 
 #include <iostream>
-#include <config.h>
+//#include <config.h>
 
 using namespace std;
 
@@ -10,13 +10,15 @@ using namespace std;
 #endif
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    cout << "major: " << aaa << endl;
-    cout << "minor: " << bbb << endl;
+
+//    cout << "major: " << aaa << endl;
+//    cout << "minor: " << bbb << endl;
 
 #ifdef MATHLIB
-    cout << "add: " << add(1, 2) << endl;
+   add(1, 2);
 #endif
+
+   int a = 2;
 
 
     return 0;
