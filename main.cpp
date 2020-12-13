@@ -1,25 +1,27 @@
 
 
 #include <iostream>
-//#include <config.h>
-
-using namespace std;
+#include <config.h> //生成的配置文件
 
 #ifdef MATHLIB
 #include "add.h"
 #endif
 
+using namespace std;
 int main() {
 
-//    cout << "major: " << aaa << endl;
-//    cout << "minor: " << bbb << endl;
+    cout << "MAX_X: " << MAX_X << endl;
+    cout << "MAX_Y: " << MAX_Y << endl;
+
+    int x;
 
 #ifdef MATHLIB
-   add(1, 2);
+   x = add(1, 2);
+#else
+   x = 0;
 #endif
 
-   int a = 2;
-
+   cout << "x: " << x << endl;
 
     return 0;
 }

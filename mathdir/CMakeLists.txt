@@ -1,20 +1,18 @@
 
-message(STATUS "HLL")
 
-#生成可执行程序
-add_executable(MakeTable table.cpp)
+add_executable(MakeTable multi.cpp) #生成可执行程序
 
-#运行生成的程序
+#生成的文件, 以及生成文件所依赖的方法
 add_custom_command(
-        OUTPUT ${PROJECT_BINARY_DIR}/table.h
-        COMMAND MakeTable ${PROJECT_BINARY_DIR}/table.h
+        OUTPUT ${PROJECT_BINARY_DIR}/multi.h
+        COMMAND MakeTable ${PROJECT_BINARY_DIR}/multi.h
         DEPENDS MakeTable
 )
 
-#添加头文件搜索目录
-include_directories(${PROJECT_BINARY_DIR})
+include_directories(${PROJECT_BINARY_DIR})  #添加头文件搜索目录
 
-#生成库
-add_library(add add.cpp ${PROJECT_BINARY_DIR}/table.h)
+add_library(add SHARED add.cpp ${PROJECT_BINARY_DIR}/multi.h)   #生成库
 
-install(FILES "${PROJECT_BINARY_DIR}/table.h" DESTINATION ${PROJECT_SOURCE_DIR})
+#安装文件
+install(FILES "${PROJECT_BINARY_DIR}/multi.h" DESTINATION include)
+install(FILES "${PROJECT_BINARY_DIR}/config.h" DESTINATION include)

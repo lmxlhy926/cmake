@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char *argv[]){
 
     std::ofstream file(argv[1]);
-    file << "#define TABLE" << endl;
+    file << "#define DOUBLEADD" << endl;
 
     return 0;
 }

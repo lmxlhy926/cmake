@@ -1,6 +1,6 @@
 
-#define aaa @config1@
-#define bbb @config2@
+#define MAX_X @MAX_X@
+#define MAX_Y @MAX_Y@
 #cmakedefine MATHLIB
 
 
