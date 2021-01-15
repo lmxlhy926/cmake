@@ -15,7 +15,7 @@ set(CMAKE_CXX_STANDARD 14)  #指定c++标准
 
 set(MAX_X 100)  #给变量赋值
 set(MAX_Y 200)
-set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}) #指定安装目录前缀
 
 option(MATHLIB "use add function" ON)   #GUI交互选项
 
